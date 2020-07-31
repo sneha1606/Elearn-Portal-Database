@@ -3,7 +3,7 @@
 Introduction:
 The sudden shift towards the online educational methods due to the current pandemic has reulted in the boost of the softwares which provides a virtual platform for the institutes to connect in a better way with their students. This project aimed at developing a database for an elearning platform for such IT solutions which are provided to various schools and colleges etc. The planning for the database to be implemented included understanding the sector and creation of an Entity - Relationship Diagram (The below mentioned diagram is the ER-Diagram for elearn portal). An entire database using dummy data was created for implementation of the project. 
 
-* The ER - Diagram for the project is shown below *
+*The ER - Diagram for the project is shown below* 
 
 [The Data Base comprises of the Following Table.]
  
