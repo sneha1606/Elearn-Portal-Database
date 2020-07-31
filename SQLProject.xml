@@ -1,0 +1,1707 @@
+<?xml version="1.0" encoding="System"?>
+<database>
+    <name>SQL_Project</name>
+    <table>
+        <database></database>
+        <name>Announcements</name>
+        <ddl>CREATE TABLE Announcements (Announcement_Num Integer PRIMARY KEY UNIQUE NOT NULL, Title Text NOT NULL, Dept_ID Text NOT NULL, Upload_Date DATE NOT NULL)</ddl>
+        <columns>
+            <column>
+                <name>Announcement_Num</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>PRIMARY KEY</type>
+                        <definition>PRIMARY KEY </definition>
+                    </constraint>
+                    <constraint>
+                        <type>UNIQUE</type>
+                        <definition>UNIQUE </definition>
+                    </constraint>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Title</name>
+                <type>Text</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Dept_ID</name>
+                <type>Text</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Upload_Date</name>
+                <type>DATE</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+        </columns>
+        <rows>
+            <row>
+                <value column="0">1</value>
+                <value column="1">General Weekly Time Table</value>
+                <value column="2">1</value>
+                <value column="3">12-01-2020</value>
+            </row>
+            <row>
+                <value column="0">2</value>
+                <value column="1">Policy on attendance for lectures and events </value>
+                <value column="2">1</value>
+                <value column="3">17-01-2020</value>
+            </row>
+            <row>
+                <value column="0">3</value>
+                <value column="1">List of Student Subject Assistant</value>
+                <value column="2">4</value>
+                <value column="3">17-01-2020</value>
+            </row>
+            <row>
+                <value column="0">4</value>
+                <value column="1">Sebi Internship Notice</value>
+                <value column="2">2</value>
+                <value column="3">20-01-2020</value>
+            </row>
+            <row>
+                <value column="0">5</value>
+                <value column="1">EY GDS Competition</value>
+                <value column="2">2</value>
+                <value column="3">16-07-2019</value>
+            </row>
+        </rows>
+    </table>
+    <table>
+        <database></database>
+        <name>Client_Departments</name>
+        <ddl>CREATE TABLE Client_Departments (User_ID INTEGER, Dept_ID Integer PRIMARY KEY UNIQUE NOT NULL, Dept_Name Text, Dept_Head Text)</ddl>
+        <columns>
+            <column>
+                <name>User_ID</name>
+                <type>INTEGER</type>
+            </column>
+            <column>
+                <name>Dept_ID</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>PRIMARY KEY</type>
+                        <definition>PRIMARY KEY </definition>
+                    </constraint>
+                    <constraint>
+                        <type>UNIQUE</type>
+                        <definition>UNIQUE </definition>
+                    </constraint>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Dept_Name</name>
+                <type>Text</type>
+            </column>
+            <column>
+                <name>Dept_Head</name>
+                <type>Text</type>
+            </column>
+        </columns>
+        <rows>
+            <row>
+                <value column="0">11</value>
+                <value column="1">1</value>
+                <value column="2">ADC</value>
+                <value column="3">Prof. Jitendra Misra</value>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">2</value>
+                <value column="2">CMC</value>
+                <value column="3">Dr. Vijayan</value>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">3</value>
+                <value column="2">PGDM-Core</value>
+                <value column="3">Kriti Gupta</value>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">4</value>
+                <value column="2">PGDM-Others</value>
+                <value column="3">Prof. ABC</value>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">5</value>
+                <value column="2">Security</value>
+                <value column="3">John Doe</value>
+            </row>
+        </rows>
+    </table>
+    <table>
+        <database></database>
+        <name>Courses</name>
+        <ddl>CREATE TABLE Courses (User_ID INTEGER, Course_ID Integer PRIMARY KEY UNIQUE NOT NULL, Dept_ID Integer NOT NULL, Course_Name Text NOT NULL, Dean_Name Text NOT NULL)</ddl>
+        <columns>
+            <column>
+                <name>User_ID</name>
+                <type>INTEGER</type>
+            </column>
+            <column>
+                <name>Course_ID</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>PRIMARY KEY</type>
+                        <definition>PRIMARY KEY </definition>
+                    </constraint>
+                    <constraint>
+                        <type>UNIQUE</type>
+                        <definition>UNIQUE </definition>
+                    </constraint>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Dept_ID</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Course_Name</name>
+                <type>Text</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Dean_Name</name>
+                <type>Text</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+        </columns>
+        <rows>
+            <row>
+                <value column="0">11</value>
+                <value column="1">1</value>
+                <value column="2">4</value>
+                <value column="3">RBA</value>
+                <value column="4">Prof. Nimkar</value>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">2</value>
+                <value column="2">3</value>
+                <value column="3">Marketing</value>
+                <value column="4">Prof. Vijayalakshmi</value>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">3</value>
+                <value column="2">3</value>
+                <value column="3">HR</value>
+                <value column="4">Prof. Vijayan</value>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">4</value>
+                <value column="2">3</value>
+                <value column="3">Operations</value>
+                <value column="4">Dr. Srinivasan Gondhalekar</value>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">5</value>
+                <value column="2">3</value>
+                <value column="3">Finance</value>
+                <value column="4">Prof. Vanita Patel</value>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">6</value>
+                <value column="2">4</value>
+                <value column="3">BD</value>
+                <value column="4">Prof. Kalpesh</value>
+            </row>
+        </rows>
+    </table>
+    <table>
+        <database></database>
+        <name>Department</name>
+        <ddl>CREATE TABLE Department (Dept_ID Integer PRIMARY KEY NOT NULL UNIQUE, Dept_Name Text, Dept_Extension Integer, Dept_Description Text)</ddl>
+        <columns>
+            <column>
+                <name>Dept_ID</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>PRIMARY KEY</type>
+                        <definition>PRIMARY KEY </definition>
+                    </constraint>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL </definition>
+                    </constraint>
+                    <constraint>
+                        <type>UNIQUE</type>
+                        <definition>UNIQUE</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Dept_Name</name>
+                <type>Text</type>
+            </column>
+            <column>
+                <name>Dept_Extension</name>
+                <type>Integer</type>
+            </column>
+            <column>
+                <name>Dept_Description</name>
+                <type>Text</type>
+            </column>
+        </columns>
+        <rows>
+            <row>
+                <value column="0">1</value>
+                <value column="1">Chief Executing Officer</value>
+                <value column="2">221</value>
+                <value column="3">The founder of the Company</value>
+            </row>
+            <row>
+                <value column="0">2</value>
+                <value column="1">Vice President</value>
+                <value column="2">222</value>
+                <value column="3">The VP of the comapny</value>
+            </row>
+            <row>
+                <value column="0">3</value>
+                <value column="1">Business Development Executive</value>
+                <value column="2">223</value>
+                <value column="3">The sales excutive who bring customers</value>
+            </row>
+            <row>
+                <value column="0">4</value>
+                <value column="1">Technical Head</value>
+                <value column="2">224</value>
+                <value column="3">The technicians working for enhancing the portal</value>
+            </row>
+            <row>
+                <value column="0">5</value>
+                <value column="1">ETL Head</value>
+                <value column="2">225</value>
+                <value column="3">The people who load the data in the database</value>
+            </row>
+            <row>
+                <value column="0">6</value>
+                <value column="1">Digital Marketing Head</value>
+                <value column="2">226</value>
+                <value column="3">The department for marketing over digital media</value>
+            </row>
+            <row>
+                <value column="0">7</value>
+                <value column="1">Brand Manager</value>
+                <value column="2">227</value>
+                <value column="3">The department responsible for branding</value>
+            </row>
+            <row>
+                <value column="0">8</value>
+                <value column="1">Account Manager</value>
+                <value column="2">228</value>
+                <value column="3">The depatment which handles accounts and invoices</value>
+            </row>
+        </rows>
+    </table>
+    <table>
+        <database></database>
+        <name>Employees</name>
+        <ddl>CREATE TABLE Employees (Emp_ID Integer PRIMARY KEY UNIQUE, Office_ID Integer REFERENCES Office (Office_ID) ON DELETE NO ACTION ON UPDATE NO ACTION, Dept_ID Integer REFERENCES Department (Dept_ID), First_Name TEXT, Last_Name TEXT, Contact_Details Varchar (40), Salary Varchar (40), Login TEXT UNIQUE, Password TEXT, Account_Number TEXT UNIQUE, Bank_Name TEXT)</ddl>
+        <columns>
+            <column>
+                <name>Emp_ID</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>PRIMARY KEY</type>
+                        <definition>PRIMARY KEY </definition>
+                    </constraint>
+                    <constraint>
+                        <type>UNIQUE</type>
+                        <definition>UNIQUE</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Office_ID</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>FOREIGN KEY</type>
+                        <definition>REFERENCES Office (Office_ID) ON DELETE NO ACTION ON UPDATE NO ACTION</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Dept_ID</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>FOREIGN KEY</type>
+                        <definition>REFERENCES Department (Dept_ID)</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>First_Name</name>
+                <type>TEXT</type>
+            </column>
+            <column>
+                <name>Last_Name</name>
+                <type>TEXT</type>
+            </column>
+            <column>
+                <name>Contact_Details</name>
+                <type>Varchar</type>
+            </column>
+            <column>
+                <name>Salary</name>
+                <type>Varchar</type>
+            </column>
+            <column>
+                <name>Login</name>
+                <type>TEXT</type>
+                <constraints>
+                    <constraint>
+                        <type>UNIQUE</type>
+                        <definition>UNIQUE</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Password</name>
+                <type>TEXT</type>
+            </column>
+            <column>
+                <name>Account_Number</name>
+                <type>TEXT</type>
+                <constraints>
+                    <constraint>
+                        <type>UNIQUE</type>
+                        <definition>UNIQUE</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Bank_Name</name>
+                <type>TEXT</type>
+            </column>
+        </columns>
+        <rows>
+            <row>
+                <value column="0">1</value>
+                <value column="1">1</value>
+                <value column="2">1</value>
+                <value column="3">Darshit</value>
+                <value column="4">Bhayani</value>
+                <value column="5">9</value>
+                <value column="6">50,000</value>
+                <value column="7">darshit.bhayani@kanuush.com</value>
+                <value column="8">darshit@123</value>
+                <value column="9">510265983659</value>
+                <value column="10">PMC</value>
+            </row>
+            <row>
+                <value column="0">2</value>
+                <value column="1">2</value>
+                <value column="2">2</value>
+                <value column="3">Vedang</value>
+                <value column="4">Sawant</value>
+                <value column="5">8</value>
+                <value column="6">35,000</value>
+                <value column="7">vedang.sawant@kanuush.com</value>
+                <value column="8">vedang@123</value>
+                <value column="9">569873698423</value>
+                <value column="10">Yes Bank</value>
+            </row>
+            <row>
+                <value column="0">3</value>
+                <value column="1">1</value>
+                <value column="2">3</value>
+                <value column="3">Abhishek</value>
+                <value column="4">Jain</value>
+                <value column="5">8</value>
+                <value column="6">25,000</value>
+                <value column="7">abhishek.jain@kanuush.com</value>
+                <value column="8">abhishek@123</value>
+                <value column="9">265497863016</value>
+                <value column="10">SBI</value>
+            </row>
+            <row>
+                <value column="0">4</value>
+                <value column="1">1</value>
+                <value column="2">3</value>
+                <value column="3">Apurva</value>
+                <value column="4">Deore</value>
+                <value column="5">8</value>
+                <value column="6">25,000</value>
+                <value column="7">apurva.deore@kanuush.com</value>
+                <value column="8">apurva@123</value>
+                <value column="9">255498412631</value>
+                <value column="10">Axis Bank</value>
+            </row>
+            <row>
+                <value column="0">5</value>
+                <value column="1">2</value>
+                <value column="2">3</value>
+                <value column="3">Vedant</value>
+                <value column="4">Rathi</value>
+                <value column="5">7</value>
+                <value column="6">25,000</value>
+                <value column="7">vedant.rathi@kanuush.com</value>
+                <value column="8">vedant@123</value>
+                <value column="9">123654879516</value>
+                <value column="10">Bank of Baroda</value>
+            </row>
+            <row>
+                <value column="0">6</value>
+                <value column="1">1</value>
+                <value column="2">4</value>
+                <value column="3">Shivani</value>
+                <value column="4">Khandelwal</value>
+                <value column="5">8</value>
+                <value column="6">25,000</value>
+                <value column="7">shivani.khandelwal@kanuush.com</value>
+                <value column="8">shivani@123</value>
+                <value column="9">656568523156</value>
+                <value column="10">Oriental Bank</value>
+            </row>
+            <row>
+                <value column="0">7</value>
+                <value column="1">1</value>
+                <value column="2">5</value>
+                <value column="3">Sudha Rani</value>
+                <value column="4">Hosakoti</value>
+                <value column="5">9</value>
+                <value column="6">25,000</value>
+                <value column="7">sudha rani.hosakoti@kanuush.com</value>
+                <value column="8">sudha rani@123</value>
+                <value column="9">545645634843</value>
+                <value column="10">HDFC</value>
+            </row>
+            <row>
+                <value column="0">8</value>
+                <value column="1">2</value>
+                <value column="2">6</value>
+                <value column="3">Aashi</value>
+                <value column="4">Jain</value>
+                <value column="5">8</value>
+                <value column="6">20,000</value>
+                <value column="7">aashi.jain@kanuush.com</value>
+                <value column="8">aashi@123</value>
+                <value column="9">556348646431</value>
+                <value column="10">ICICI</value>
+            </row>
+            <row>
+                <value column="0">9</value>
+                <value column="1">2</value>
+                <value column="2">7</value>
+                <value column="3">Dipali</value>
+                <value column="4">Khatri</value>
+                <value column="5">7</value>
+                <value column="6">20,000</value>
+                <value column="7">dipali.khatri@kanuush.com</value>
+                <value column="8">dipali@123</value>
+                <value column="9">369852147896</value>
+                <value column="10">HSBC</value>
+            </row>
+            <row>
+                <value column="0">10</value>
+                <value column="1">1</value>
+                <value column="2">8</value>
+                <value column="3">Ashana</value>
+                <value column="4">Mehta</value>
+                <value column="5">5</value>
+                <value column="6">20,000</value>
+                <value column="7">ashana.mehta@kanuush.com</value>
+                <value column="8">ashana@123</value>
+                <value column="9">326589874512</value>
+                <value column="10">Indian Overseas Bank</value>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">2</value>
+                <value column="2">8</value>
+                <value column="3">Jhanvi</value>
+                <value column="4">Sheth</value>
+                <value column="5">5</value>
+                <value column="6">20,000</value>
+                <value column="7">jhanvi.sheth@kanuush.com</value>
+                <value column="8">jhanvi@123</value>
+                <value column="9">213654879789</value>
+                <value column="10">Dena Bank</value>
+            </row>
+        </rows>
+    </table>
+    <table>
+        <database></database>
+        <name>Feedback</name>
+        <ddl>CREATE TABLE Feedback (FB_Num Integer PRIMARY KEY UNIQUE NOT NULL DEFAULT AUTOINCREMET, Student_ID Integer NOT NULL, Teacher_ID Integer NOT NULL, Punctuality Integer NOT NULL, Effectiveness Integer NOT NULL, Accessibility Integer NOT NULL, Exposure Integer NOT NULL)</ddl>
+        <columns>
+            <column>
+                <name>FB_Num</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>PRIMARY KEY</type>
+                        <definition>PRIMARY KEY </definition>
+                    </constraint>
+                    <constraint>
+                        <type>UNIQUE</type>
+                        <definition>UNIQUE </definition>
+                    </constraint>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL </definition>
+                    </constraint>
+                    <constraint>
+                        <type>DEFAULT</type>
+                        <definition>DEFAULT AUTOINCREMET</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Student_ID</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Teacher_ID</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Punctuality</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Effectiveness</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Accessibility</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Exposure</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+        </columns>
+        <rows>
+            <row>
+                <value column="0">1</value>
+                <value column="1">1</value>
+                <value column="2">1</value>
+                <value column="3">4</value>
+                <value column="4">4</value>
+                <value column="5">4</value>
+                <value column="6">4</value>
+            </row>
+            <row>
+                <value column="0">2</value>
+                <value column="1">1</value>
+                <value column="2">2</value>
+                <value column="3">5</value>
+                <value column="4">5</value>
+                <value column="5">5</value>
+                <value column="6">5</value>
+            </row>
+            <row>
+                <value column="0">3</value>
+                <value column="1">1</value>
+                <value column="2">3</value>
+                <value column="3">3</value>
+                <value column="4">3</value>
+                <value column="5">3</value>
+                <value column="6">3</value>
+            </row>
+            <row>
+                <value column="0">4</value>
+                <value column="1">1</value>
+                <value column="2">4</value>
+                <value column="3">4</value>
+                <value column="4">4</value>
+                <value column="5">4</value>
+                <value column="6">4</value>
+            </row>
+            <row>
+                <value column="0">5</value>
+                <value column="1">1</value>
+                <value column="2">5</value>
+                <value column="3">5</value>
+                <value column="4">5</value>
+                <value column="5">5</value>
+                <value column="6">5</value>
+            </row>
+            <row>
+                <value column="0">6</value>
+                <value column="1">2</value>
+                <value column="2">1</value>
+                <value column="3">3</value>
+                <value column="4">3</value>
+                <value column="5">3</value>
+                <value column="6">3</value>
+            </row>
+            <row>
+                <value column="0">7</value>
+                <value column="1">2</value>
+                <value column="2">2</value>
+                <value column="3">4</value>
+                <value column="4">4</value>
+                <value column="5">4</value>
+                <value column="6">4</value>
+            </row>
+            <row>
+                <value column="0">8</value>
+                <value column="1">2</value>
+                <value column="2">3</value>
+                <value column="3">5</value>
+                <value column="4">5</value>
+                <value column="5">5</value>
+                <value column="6">5</value>
+            </row>
+            <row>
+                <value column="0">9</value>
+                <value column="1">2</value>
+                <value column="2">4</value>
+                <value column="3">3</value>
+                <value column="4">3</value>
+                <value column="5">3</value>
+                <value column="6">3</value>
+            </row>
+            <row>
+                <value column="0">10</value>
+                <value column="1">2</value>
+                <value column="2">5</value>
+                <value column="3">2</value>
+                <value column="4">2</value>
+                <value column="5">2</value>
+                <value column="6">2</value>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">3</value>
+                <value column="2">1</value>
+                <value column="3">4</value>
+                <value column="4">4</value>
+                <value column="5">4</value>
+                <value column="6">4</value>
+            </row>
+            <row>
+                <value column="0">12</value>
+                <value column="1">3</value>
+                <value column="2">2</value>
+                <value column="3">5</value>
+                <value column="4">5</value>
+                <value column="5">5</value>
+                <value column="6">5</value>
+            </row>
+            <row>
+                <value column="0">13</value>
+                <value column="1">3</value>
+                <value column="2">3</value>
+                <value column="3">3</value>
+                <value column="4">3</value>
+                <value column="5">3</value>
+                <value column="6">3</value>
+            </row>
+            <row>
+                <value column="0">14</value>
+                <value column="1">3</value>
+                <value column="2">4</value>
+                <value column="3">2</value>
+                <value column="4">2</value>
+                <value column="5">2</value>
+                <value column="6">2</value>
+            </row>
+            <row>
+                <value column="0">15</value>
+                <value column="1">3</value>
+                <value column="2">5</value>
+                <value column="3">4</value>
+                <value column="4">4</value>
+                <value column="5">4</value>
+                <value column="6">4</value>
+            </row>
+            <row>
+                <value column="0">16</value>
+                <value column="1">4</value>
+                <value column="2">1</value>
+                <value column="3">5</value>
+                <value column="4">5</value>
+                <value column="5">5</value>
+                <value column="6">5</value>
+            </row>
+            <row>
+                <value column="0">17</value>
+                <value column="1">4</value>
+                <value column="2">2</value>
+                <value column="3">3</value>
+                <value column="4">3</value>
+                <value column="5">3</value>
+                <value column="6">3</value>
+            </row>
+            <row>
+                <value column="0">18</value>
+                <value column="1">4</value>
+                <value column="2">3</value>
+                <value column="3">2</value>
+                <value column="4">2</value>
+                <value column="5">2</value>
+                <value column="6">2</value>
+            </row>
+            <row>
+                <value column="0">19</value>
+                <value column="1">4</value>
+                <value column="2">4</value>
+                <value column="3">5</value>
+                <value column="4">5</value>
+                <value column="5">5</value>
+                <value column="6">5</value>
+            </row>
+            <row>
+                <value column="0">20</value>
+                <value column="1">4</value>
+                <value column="2">5</value>
+                <value column="3">3</value>
+                <value column="4">3</value>
+                <value column="5">3</value>
+                <value column="6">3</value>
+            </row>
+            <row>
+                <value column="0">21</value>
+                <value column="1">5</value>
+                <value column="2">1</value>
+                <value column="3">4</value>
+                <value column="4">4</value>
+                <value column="5">4</value>
+                <value column="6">4</value>
+            </row>
+            <row>
+                <value column="0">22</value>
+                <value column="1">5</value>
+                <value column="2">2</value>
+                <value column="3">2</value>
+                <value column="4">2</value>
+                <value column="5">2</value>
+                <value column="6">2</value>
+            </row>
+            <row>
+                <value column="0">23</value>
+                <value column="1">5</value>
+                <value column="2">3</value>
+                <value column="3">5</value>
+                <value column="4">5</value>
+                <value column="5">5</value>
+                <value column="6">5</value>
+            </row>
+            <row>
+                <value column="0">24</value>
+                <value column="1">5</value>
+                <value column="2">4</value>
+                <value column="3">3</value>
+                <value column="4">3</value>
+                <value column="5">3</value>
+                <value column="6">3</value>
+            </row>
+            <row>
+                <value column="0">25</value>
+                <value column="1">5</value>
+                <value column="2">5</value>
+                <value column="3">4</value>
+                <value column="4">4</value>
+                <value column="5">4</value>
+                <value column="6">4</value>
+            </row>
+        </rows>
+    </table>
+    <table>
+        <database></database>
+        <name>Invoices</name>
+        <ddl>CREATE TABLE Invoices (Invoice_ID Integer PRIMARY KEY UNIQUE NOT NULL, User_ID Integer NOT NULL, Subscription_ID Integer REFERENCES Subscription (Subscription_ID) NOT NULL, Emp_ID INTEGER REFERENCES Employees (Emp_ID), Payment_Method TEXT, Due_Date_Invoices DATE)</ddl>
+        <columns>
+            <column>
+                <name>Invoice_ID</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>PRIMARY KEY</type>
+                        <definition>PRIMARY KEY </definition>
+                    </constraint>
+                    <constraint>
+                        <type>UNIQUE</type>
+                        <definition>UNIQUE </definition>
+                    </constraint>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>User_ID</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Subscription_ID</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>FOREIGN KEY</type>
+                        <definition>REFERENCES Subscription (Subscription_ID) </definition>
+                    </constraint>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Emp_ID</name>
+                <type>INTEGER</type>
+                <constraints>
+                    <constraint>
+                        <type>FOREIGN KEY</type>
+                        <definition>REFERENCES Employees (Emp_ID)</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Payment_Method</name>
+                <type>TEXT</type>
+            </column>
+            <column>
+                <name>Due_Date_Invoices</name>
+                <type>DATE</type>
+            </column>
+        </columns>
+        <rows>
+            <row>
+                <value column="0">1</value>
+                <value column="1">1</value>
+                <value column="2">2</value>
+                <value column="3">10</value>
+                <value column="4">Pay Pal</value>
+                <value column="5">16/01/2020</value>
+            </row>
+            <row>
+                <value column="0">2</value>
+                <value column="1">2</value>
+                <value column="2">3</value>
+                <value column="3">11</value>
+                <value column="4">Razor Pay</value>
+                <value column="5">17/05/2020</value>
+            </row>
+            <row>
+                <value column="0">3</value>
+                <value column="1">3</value>
+                <value column="2">4</value>
+                <value column="3">11</value>
+                <value column="4">Pay Pal</value>
+                <value column="5">01/06/2020</value>
+            </row>
+            <row>
+                <value column="0">4</value>
+                <value column="1">1</value>
+                <value column="2">1</value>
+                <value column="3">10</value>
+                <value column="4">Razor Pay</value>
+                <value column="5">16/06/2020</value>
+            </row>
+            <row>
+                <value column="0">5</value>
+                <value column="1">4</value>
+                <value column="2">2</value>
+                <value column="3">10</value>
+                <value column="4">Pay Pal</value>
+                <value column="5">21/06/2020</value>
+            </row>
+            <row>
+                <value column="0">6</value>
+                <value column="1">5</value>
+                <value column="2">3</value>
+                <value column="3">10</value>
+                <value column="4">Razor Pay</value>
+                <value column="5">05/03/2020</value>
+            </row>
+        </rows>
+    </table>
+    <table>
+        <database></database>
+        <name>Office</name>
+        <ddl>CREATE TABLE Office (Office_ID Integer PRIMARY KEY UNIQUE, Office_Address Text, Office_Contact_Details Varchar (40), Office_Type Text, Company_Reg_Num Integer)</ddl>
+        <columns>
+            <column>
+                <name>Office_ID</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>PRIMARY KEY</type>
+                        <definition>PRIMARY KEY </definition>
+                    </constraint>
+                    <constraint>
+                        <type>UNIQUE</type>
+                        <definition>UNIQUE</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Office_Address</name>
+                <type>Text</type>
+            </column>
+            <column>
+                <name>Office_Contact_Details</name>
+                <type>Varchar</type>
+            </column>
+            <column>
+                <name>Office_Type</name>
+                <type>Text</type>
+            </column>
+            <column>
+                <name>Company_Reg_Num</name>
+                <type>Integer</type>
+            </column>
+        </columns>
+        <rows>
+            <row>
+                <value column="0">1</value>
+                <value column="1">MAY FLOWER FL. 2101, HIRANANDANI MEADOWS, THANE Thane MH 400607 IN</value>
+                <value column="2">022-29661053</value>
+                <value column="3">Head Office</value>
+                <value column="4">315399</value>
+            </row>
+            <row>
+                <value column="0">2</value>
+                <value column="1">MAY FLOWER FL. 2101, GREEN MEADOWS, VASHI Navi Mumbai MH 400703 IN</value>
+                <value column="2">022-29661063</value>
+                <value column="3">Branch</value>
+                <value column="4">315399</value>
+            </row>
+        </rows>
+    </table>
+    <table>
+        <database></database>
+        <name>Professor</name>
+        <ddl>CREATE TABLE Professor (User_ID INTEGER, Professor_ID, Dept_ID Integer NOT NULL, Name Text NOT NULL, Contact_Details Text NOT NULL, Address Text NOT NULL, Designation TEXT NOT NULL)</ddl>
+        <columns>
+            <column>
+                <name>User_ID</name>
+                <type>INTEGER</type>
+            </column>
+            <column>
+                <name>Professor_ID</name>
+                <type></type>
+            </column>
+            <column>
+                <name>Dept_ID</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Name</name>
+                <type>Text</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Contact_Details</name>
+                <type>Text</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Address</name>
+                <type>Text</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Designation</name>
+                <type>TEXT</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+        </columns>
+        <rows>
+            <row>
+                <value column="0">11</value>
+                <value column="1">1</value>
+                <value column="2">4</value>
+                <value column="3">Denver Periera</value>
+                <value column="4">56564</value>
+                <value column="5">Ghar</value>
+                <value column="6">Dean-RBA</value>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">2</value>
+                <value column="2">3</value>
+                <value column="3">Priya Kavre</value>
+                <value column="4">56565</value>
+                <value column="5">Thane</value>
+                <value column="6">Ast. Professor</value>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">3</value>
+                <value column="2">3</value>
+                <value column="3">Kriti Gupta</value>
+                <value column="4">56566</value>
+                <value column="5">Jabalpur</value>
+                <value column="6">Dean-Core</value>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">4</value>
+                <value column="2">4</value>
+                <value column="3">Harshil Mehta</value>
+                <value column="4">56567</value>
+                <value column="5">Borivali</value>
+                <value column="6">Ast. Professor</value>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">5</value>
+                <value column="2">4</value>
+                <value column="3">Archit Mehta</value>
+                <value column="4">56568</value>
+                <value column="5">Virar</value>
+                <value column="6">Ast. Professor</value>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">6</value>
+                <value column="2">4</value>
+                <value column="3">Tanmay Shaha</value>
+                <value column="4">56569</value>
+                <value column="5">Thane</value>
+                <value column="6">ASt. Professor</value>
+            </row>
+        </rows>
+    </table>
+    <table>
+        <database></database>
+        <name>Students</name>
+        <ddl>CREATE TABLE Students (User_ID INTEGER, Roll_Number Integer PRIMARY KEY UNIQUE NOT NULL, Name Text, Addres Text, Contact_Details Text, Course_ID Integer, Xth_Board Text, Xth_Score Float, XIIth_Board Text, XIIth_Score Float, Graduation_University Text, Graduation_Score Float, Trim_1_CGPA Float, SIP_Company Text, Exe_Company Text)</ddl>
+        <columns>
+            <column>
+                <name>User_ID</name>
+                <type>INTEGER</type>
+            </column>
+            <column>
+                <name>Roll_Number</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>PRIMARY KEY</type>
+                        <definition>PRIMARY KEY </definition>
+                    </constraint>
+                    <constraint>
+                        <type>UNIQUE</type>
+                        <definition>UNIQUE </definition>
+                    </constraint>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Name</name>
+                <type>Text</type>
+            </column>
+            <column>
+                <name>Addres</name>
+                <type>Text</type>
+            </column>
+            <column>
+                <name>Contact_Details</name>
+                <type>Text</type>
+            </column>
+            <column>
+                <name>Course_ID</name>
+                <type>Integer</type>
+            </column>
+            <column>
+                <name>Xth_Board</name>
+                <type>Text</type>
+            </column>
+            <column>
+                <name>Xth_Score</name>
+                <type>Float</type>
+            </column>
+            <column>
+                <name>XIIth_Board</name>
+                <type>Text</type>
+            </column>
+            <column>
+                <name>XIIth_Score</name>
+                <type>Float</type>
+            </column>
+            <column>
+                <name>Graduation_University</name>
+                <type>Text</type>
+            </column>
+            <column>
+                <name>Graduation_Score</name>
+                <type>Float</type>
+            </column>
+            <column>
+                <name>Trim_1_CGPA</name>
+                <type>Float</type>
+            </column>
+            <column>
+                <name>SIP_Company</name>
+                <type>Text</type>
+            </column>
+            <column>
+                <name>Exe_Company</name>
+                <type>Text</type>
+            </column>
+        </columns>
+        <rows>
+            <row>
+                <value column="0">11</value>
+                <value column="1">1</value>
+                <value column="2">Shrishti Tiwari</value>
+                <value column="3">Raheja Tower</value>
+                <value column="4">90826836</value>
+                <value column="5">1</value>
+                <value column="6">SSC</value>
+                <value column="7">86.45</value>
+                <value column="8">HSC</value>
+                <value column="9">80.5</value>
+                <value column="10">BMS-Mumbai University</value>
+                <value column="11">9.4</value>
+                <value column="12">7.5</value>
+                <value column="13">BATA</value>
+                <value column="14" null="true"/>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">2</value>
+                <value column="2">Pratishtha Upadhyay</value>
+                <value column="3">Galaxy Jupiter</value>
+                <value column="4">70217436</value>
+                <value column="5">1</value>
+                <value column="6">SSC</value>
+                <value column="7">85.9</value>
+                <value column="8">HSC</value>
+                <value column="9">77.9</value>
+                <value column="10">BAF-Mumbai University</value>
+                <value column="11">9.7</value>
+                <value column="12">7.2</value>
+                <value column="13">Thermax</value>
+                <value column="14" null="true"/>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">3</value>
+                <value column="2">Shivansh Mishra</value>
+                <value column="3">Raj Tower</value>
+                <value column="4">99658265</value>
+                <value column="5">2</value>
+                <value column="6">ICSE</value>
+                <value column="7">89.45</value>
+                <value column="8">CBSE</value>
+                <value column="9">80.92</value>
+                <value column="10">B.E.-Mumbai University</value>
+                <value column="11">8.33</value>
+                <value column="12">8.3</value>
+                <value column="13">SEBI</value>
+                <value column="14" null="true"/>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">4</value>
+                <value column="2">Shlok Mishra</value>
+                <value column="3">Raj Tower</value>
+                <value column="4">56942634</value>
+                <value column="5">2</value>
+                <value column="6">ICSE</value>
+                <value column="7">92.72</value>
+                <value column="8">CBSE</value>
+                <value column="9">82.6</value>
+                <value column="10">B.E-Mumbai University</value>
+                <value column="11">8.6</value>
+                <value column="12">8</value>
+                <value column="13">Curraso</value>
+                <value column="14" null="true"/>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">5</value>
+                <value column="2">Shreenika Upadhyay</value>
+                <value column="3">Raheja Tower</value>
+                <value column="4">11556633</value>
+                <value column="5">2</value>
+                <value column="6">ICSE</value>
+                <value column="7">95.67</value>
+                <value column="8">HSC</value>
+                <value column="9">85.7</value>
+                <value column="10">B.E-Mumbai University</value>
+                <value column="11">8.4</value>
+                <value column="12">7.9</value>
+                <value column="13">SEBI</value>
+                <value column="14" null="true"/>
+            </row>
+        </rows>
+    </table>
+    <table>
+        <database></database>
+        <name>Subjects</name>
+        <ddl>CREATE TABLE Subjects (User_ID INTEGER, Sub_ID Integer PRIMARY KEY UNIQUE NOT NULL, Professor_ID Integer NOT NULL, Course_ID Integer NOT NULL, Sub_Name Text NOT NULL)</ddl>
+        <columns>
+            <column>
+                <name>User_ID</name>
+                <type>INTEGER</type>
+            </column>
+            <column>
+                <name>Sub_ID</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>PRIMARY KEY</type>
+                        <definition>PRIMARY KEY </definition>
+                    </constraint>
+                    <constraint>
+                        <type>UNIQUE</type>
+                        <definition>UNIQUE </definition>
+                    </constraint>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Professor_ID</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Course_ID</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Sub_Name</name>
+                <type>Text</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+        </columns>
+        <rows>
+            <row>
+                <value column="0">11</value>
+                <value column="1">1</value>
+                <value column="2">2</value>
+                <value column="3">3</value>
+                <value column="4">Financial Management</value>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">2</value>
+                <value column="2">1</value>
+                <value column="3">4</value>
+                <value column="4">Advance Statistics</value>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">3</value>
+                <value column="2">3</value>
+                <value column="3">3</value>
+                <value column="4">Capital Markets</value>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">4</value>
+                <value column="2">4</value>
+                <value column="3">4</value>
+                <value column="4">SQL </value>
+            </row>
+            <row>
+                <value column="0">11</value>
+                <value column="1">5</value>
+                <value column="2">6</value>
+                <value column="3">4</value>
+                <value column="4">Python</value>
+            </row>
+        </rows>
+    </table>
+    <table>
+        <database></database>
+        <name>Subscription</name>
+        <ddl>CREATE TABLE Subscription (Subscription_ID Integer PRIMARY KEY UNIQUE, Subscription_Name Text, Price Text, Validity Text)</ddl>
+        <columns>
+            <column>
+                <name>Subscription_ID</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>PRIMARY KEY</type>
+                        <definition>PRIMARY KEY </definition>
+                    </constraint>
+                    <constraint>
+                        <type>UNIQUE</type>
+                        <definition>UNIQUE</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Subscription_Name</name>
+                <type>Text</type>
+            </column>
+            <column>
+                <name>Price</name>
+                <type>Text</type>
+            </column>
+            <column>
+                <name>Validity</name>
+                <type>Text</type>
+            </column>
+        </columns>
+        <rows>
+            <row>
+                <value column="0">1</value>
+                <value column="1">Anual Renewal</value>
+                <value column="2">9,999</value>
+                <value column="3">12 Months</value>
+            </row>
+            <row>
+                <value column="0">2</value>
+                <value column="1">Monthly Renewal</value>
+                <value column="2">999</value>
+                <value column="3">1 Month</value>
+            </row>
+            <row>
+                <value column="0">3</value>
+                <value column="1">Quaterly Renewal</value>
+                <value column="2">2,499</value>
+                <value column="3">3 Months</value>
+            </row>
+            <row>
+                <value column="0">4</value>
+                <value column="1">Half Yearly Renewal</value>
+                <value column="2">4,999</value>
+                <value column="3">6 Months</value>
+            </row>
+        </rows>
+    </table>
+    <table>
+        <database></database>
+        <name>Users</name>
+        <ddl>CREATE TABLE Users (User_ID Integer PRIMARY KEY UNIQUE NOT NULL, Emp_ID Integer REFERENCES Employees (Emp_ID) NOT NULL, Subscription_ID Integer REFERENCES Subscription (Subscription_ID) NOT NULL, User_Name Text NOT NULL, User_Email_ID Text UNIQUE NOT NULL, User_Mobile_Number Text UNIQUE NOT NULL, Login TEXT UNIQUE NOT NULL, Password TEXT NOT NULL, Full_Institute_Name TEXT NOT NULL, Address TEXT NOT NULL)</ddl>
+        <columns>
+            <column>
+                <name>User_ID</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>PRIMARY KEY</type>
+                        <definition>PRIMARY KEY </definition>
+                    </constraint>
+                    <constraint>
+                        <type>UNIQUE</type>
+                        <definition>UNIQUE </definition>
+                    </constraint>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Emp_ID</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>FOREIGN KEY</type>
+                        <definition>REFERENCES Employees (Emp_ID) </definition>
+                    </constraint>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Subscription_ID</name>
+                <type>Integer</type>
+                <constraints>
+                    <constraint>
+                        <type>FOREIGN KEY</type>
+                        <definition>REFERENCES Subscription (Subscription_ID) </definition>
+                    </constraint>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>User_Name</name>
+                <type>Text</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>User_Email_ID</name>
+                <type>Text</type>
+                <constraints>
+                    <constraint>
+                        <type>UNIQUE</type>
+                        <definition>UNIQUE </definition>
+                    </constraint>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>User_Mobile_Number</name>
+                <type>Text</type>
+                <constraints>
+                    <constraint>
+                        <type>UNIQUE</type>
+                        <definition>UNIQUE </definition>
+                    </constraint>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Login</name>
+                <type>TEXT</type>
+                <constraints>
+                    <constraint>
+                        <type>UNIQUE</type>
+                        <definition>UNIQUE </definition>
+                    </constraint>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Password</name>
+                <type>TEXT</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Full_Institute_Name</name>
+                <type>TEXT</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>Address</name>
+                <type>TEXT</type>
+                <constraints>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+        </columns>
+        <rows>
+            <row>
+                <value column="0">11</value>
+                <value column="1">3</value>
+                <value column="2">4</value>
+                <value column="3">Welingkar</value>
+                <value column="4">www.welingkar.org</value>
+                <value column="5">022-24198400</value>
+                <value column="6">welingkar@kanuush.org.in</value>
+                <value column="7">welingkar@123</value>
+                <value column="8">Prin L. N. Welingkar Institute of Management Development And Research</value>
+                <value column="9">Lakhamsi Napoo Road, Opp.Matunga Gymkhana, Matunga, Mumbai, Maharashtra 400019</value>
+            </row>
+            <row>
+                <value column="0">12</value>
+                <value column="1">4</value>
+                <value column="2">2</value>
+                <value column="3">NL Dalmia</value>
+                <value column="4">www.nldalmia.org</value>
+                <value column="5">022-28725792</value>
+                <value column="6">nl dalmia@kanuush.org.in</value>
+                <value column="7">nl dalmia@123</value>
+                <value column="8">N. L. Dalmia Institute of Management Studies and Research</value>
+                <value column="9">Srishti Rd, Sector 1, Mahajan Wadi, Mira Road, Mira Bhayandar, Maharashtra 401107</value>
+            </row>
+            <row>
+                <value column="0">13</value>
+                <value column="1">5</value>
+                <value column="2">3</value>
+                <value column="3">SIES</value>
+                <value column="4">www.sies.edu</value>
+                <value column="5">022-61082400</value>
+                <value column="6">sies@kanuush.org.in</value>
+                <value column="7">sies@123</value>
+                <value column="8">SIES College of Management Studies (SIESCOMS)</value>
+                <value column="9">Sri Chandrasekarendra Saraswati Vidyapuram, Plot 1-E, Sector 5, Nerul, Navi Mumbai, Maharashtra 400706</value>
+            </row>
+            <row>
+                <value column="0">14</value>
+                <value column="1">5</value>
+                <value column="2">2</value>
+                <value column="3">CIMR</value>
+                <value column="4">www.cimr.in</value>
+                <value column="5">022-62157800</value>
+                <value column="6">cimr@kanuush.org.in</value>
+                <value column="7">cimr@123</value>
+                <value column="8">Chetana's Institute of Management &amp; Research</value>
+                <value column="9">Survey No. 341, Government Colony, Sharada Devi Road, Government Colony, Bandra East, Mumbai, Maharashtra 400051</value>
+            </row>
+            <row>
+                <value column="0">15</value>
+                <value column="1">4</value>
+                <value column="2">3</value>
+                <value column="3">IBS</value>
+                <value column="4">www.ibsindia.org</value>
+                <value column="5">022-40434343</value>
+                <value column="6">ibs@kanuush.org.in</value>
+                <value column="7">ibs@123</value>
+                <value column="8">ICFAI Business School (IBS) - Mumbai</value>
+                <value column="9">Hiranandani Gardens Hiranandani Knowledge Park Opp. Hiranandani Hospital, Off, Technology St, Powai, Mumbai, Maharashtra 400076</value>
+            </row>
+        </rows>
+    </table>
+</database>
