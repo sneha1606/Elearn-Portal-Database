@@ -5,6 +5,7 @@ The sudden shift towards the online educational methods due to the current pande
 
 *The ER - Diagram for the project is shown below* 
 
+[](https://github.com/sneha1606/Elearn-Portal-Database/blob/master/Entity%20Relationship%20Diagram.png)
 [The Data Base comprises of the Following Table.]
  
 Company Details:
